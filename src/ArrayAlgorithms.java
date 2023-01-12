@@ -557,6 +557,28 @@ public class ArrayAlgorithms {
         }
     }
 
-    
+    /** Returns a NEW array of ints that contains all elements of numList in
+     *  reversed order.  For example, given the array {5, 1, 3, 4, 7, 6}, this
+     *  method returns the array {6, 7, 4, 3, 1, 5}.
+     *  Should work with all array lengths (both odd and even).
+     *
+     *  Does NOT mutate (modify) original wordList
+     *  PRECONDITION: numList.length > 0
+     *
+     *  @param numList  original array of numbers; does NOT get modified
+     *  @return  array of ints that contains numList in reversed order
+     */
+    public static int[] reverse(int[] numList)
+    {
+        int[] reverse = new int[numList.length];
+        int startFromLastIndex = reverse.length - 1;
+        for (int i : numList)
+        {
+            reverse[startFromLastIndex] = i;
+            startFromLastIndex--;
+        }
+
+        return reverse;
+    }
 
 }

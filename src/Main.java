@@ -4,28 +4,40 @@ public class Main
 {
     public static void main(String[] args)
     {
-        int[] nums = {1, 2, 3, 4, 5, 6};
-        ArrayAlgorithms.shiftNumRightModify(nums, 2);
+        int[] even = {1, 2, 3, 4, 5, 6};
+        int[] reversed1 = ArrayAlgorithms.reverse(even);
+        System.out.println(Arrays.toString(reversed1));
 
-        // original array IS modified; all elements shifted left 2
-        System.out.println(Arrays.toString(nums));
+        // original array is NOT modified
+        System.out.println(Arrays.toString(even));
 
-        int[] sameNums = {1, 2, 3, 4, 5, 6};
-        ArrayAlgorithms.shiftNumRightModify(sameNums, 4);
+        System.out.println("----");
 
-        // original array IS modified; all elements shifted left 4
-        System.out.println(Arrays.toString(sameNums));
+        int[] odd = {1, 2, 3, 4, 5};
+        int[] reversed2 = ArrayAlgorithms.reverse(odd);
+        System.out.println(Arrays.toString(reversed2));
 
-        int[] moreNums = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12};
-        ArrayAlgorithms.shiftNumRightModify(moreNums, 8);
+        // original array is NOT modified
+        System.out.println(Arrays.toString(odd));
 
-        // original array IS modified; all elements shifted left 8
-        System.out.println(Arrays.toString(moreNums));
+        System.out.println("----");
 
-        int[] moreNumsAgain = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12};
-        ArrayAlgorithms.shiftNumRightModify(moreNumsAgain, 10);
+        int[] even2 = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12};
+        int[] reversed3 = ArrayAlgorithms.reverse(even2);
+        System.out.println(Arrays.toString(reversed3));
 
-        // original array IS modified; all elements shifted left 10
-        System.out.println(Arrays.toString(moreNumsAgain));
+        // original array is NOT modified
+        System.out.println(Arrays.toString(even2));
+
+        System.out.println("----");
+
+        int[] odd2 = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11};
+        int[] reversed4 = ArrayAlgorithms.reverse(odd2);
+        System.out.println(Arrays.toString(reversed4));
+
+        // original array is NOT modified
+        System.out.println(Arrays.toString(odd2));
+
     }
+
 }
